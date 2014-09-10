@@ -32,7 +32,8 @@
     "elasticsearch": "^2.4.0",
     "filesize": "^2.0.3",
     "line-by-line": "^0.1.1",
-    "progress": "^1.1.8"
+    "progress": "^1.1.8",
+    "split": "^0.3.0"
   },
   "keywords": [
     "elasticsearch",
