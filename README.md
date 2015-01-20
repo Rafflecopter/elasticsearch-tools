@@ -11,23 +11,91 @@ exporting _parent and _routing fields.
 ## Installation
 
 ```bash
-npm install -g elasticsearch-tools
+npm install -g es-tools
 ```
 
 After installing, you will have access to the following command line tools:
 
 #### Exporting
+- [es-source](#usage-es-source)
 - [es-export-bulk](#usage-es-export-bulk)
 - [es-export-mappings](#usage-es-export-mappings)
 - [es-export-settings](#usage-es-export-settings)
 - [es-export-aliases](#usage-es-export-aliases)
 
 #### Importing
+- [es-sink](#usage-es-sink)
 - [es-import-bulk](#usage-es-import-bulk)
 - [es-import-mappings](#usage-es-import-mappings)
 - [es-import-settings](#usage-es-import-settings)
 - [es-import-aliases](#usage-es-import-aliases)
 
+## Usage: es-source
+```bash
+[elasticsearch-tools (master)]$ es-source --help
+
+  Usage: es-source [options]
+
+  Options:
+
+    -h, --help                                                                                           output usage information
+    -u, --host [url]                                                                                     elasticsearch url to connect to [http://localhost:9200]
+    -s, --scrollId [string]                                                                              provided if picking up where we left off from a previous scrolling search
+    --analyzer [string]                                                                                  ES OPTION
+    --analyzeWildcard                                                                                    ES OPTION
+    --defaultOperator [AND|OR]                                                                           ES OPTION
+    --defaultField [string]                                                                              ES OPTION
+    --explain                                                                                            ES OPTION
+    --fields [list]                                                                                      ES OPTION
+    --from [number]                                                                                      ES OPTION
+    --ignoreUnavailable                                                                                  ES OPTION
+    --allowNoIndices                                                                                     ES OPTION
+    --expandWildcards [open|closed]                                                                      ES OPTION
+    --indicesBoost [string]                                                                              ES OPTION
+    --lenient                                                                                            ES OPTION
+    --lowercaseExpandedTerms                                                                             ES OPTION
+    --preference [string]                                                                                ES OPTION
+    --q [string]                                                                                         ES OPTION
+    --routing [string]                                                                                   ES OPTION
+    --scroll [string]                                                                                    ES OPTION
+    --searchType [query_then_fetch|query_and_fetch|dfs_query_then_fetch|dfs_query_and_fetch|count|scan]  ES OPTION
+    --size [number]                                                                                      ES OPTION
+    --sort [string]                                                                                      ES OPTION
+    --source [string]                                                                                    ES OPTION
+    --_source [string]                                                                                   ES OPTION
+    --_sourceExclude [string]                                                                            ES OPTION
+    --_sourceInclude [string]                                                                            ES OPTION
+    --stats [string]                                                                                     ES OPTION
+    --suggestField [string]                                                                              ES OPTION
+    --suggestMode [missing|popular|always]                                                               ES OPTION
+    --suggestText [string]                                                                               ES OPTION
+    --timeout [number]                                                                                   ES OPTION
+    --trackScores                                                                                        ES OPTION
+    --version                                                                                            ES OPTION
+    --index [list]                                                                                       ES OPTION
+    --type [list]                                                                                        ES OPTION
+```
+
+## Usage: es-sink
+```bash
+[elasticsearch-tools (master)]$ es-sink --help
+
+  Usage: es-sink [options]
+
+  Options:
+
+    -h, --help                          output usage information
+    -v, --version                       output the version number
+    -u, --host [string]                 the elasticsearch host to connect to
+    -b, --batchSize [num]               the number of operations to send per bulk request
+    -c, --consistency [one|quorum|all]  elasticsearch consistency setting for the bulk request
+    -r, --refresh                       if present, refresh index after performing each bulk request
+    -s, --replication [sync|async]      explicitly set the replication type [sync]
+    -p, --routing [string]              specify a routing value
+    -m, --timeout [num]                 number of milliseconds to timeout after during a bulk request
+    -t, --type [string]                 default document type if not provided
+    -i, --index [string]                default elasticsearch index if not provided
+```
 
 ## Usage: es-export-bulk
 
