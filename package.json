@@ -13,7 +13,7 @@
     "es-import-bulk": "./lib/es-import-bulk.js",
     "es-import-mappings": "./lib/es-import-mappings.js",
     "es-import-settings": "./lib/es-import-settings.js",
-    "es_source": "./lib/es-source.js",
+    "es-source": "./lib/es-source.js",
     "es-sink": "./lib/es-sink.js"
   },
   "author": "skratchdot",
