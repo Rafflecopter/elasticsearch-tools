@@ -1,8 +1,8 @@
 {
   "name": "elasticsearch-tools",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Elasticsearch command line tools for importing, exporting, etc",
-  "homepage": "http://github.com/skratchdot/elasticsearch-tools",
+  "homepage": "http://github.com/Rafflecopter/elasticsearch-tools",
   "preferGlobal": true,
   "bin": {
     "es-export-aliases": "./lib/es-export-aliases.js",
@@ -12,16 +12,18 @@
     "es-import-aliases": "./lib/es-import-aliases.js",
     "es-import-bulk": "./lib/es-import-bulk.js",
     "es-import-mappings": "./lib/es-import-mappings.js",
-    "es-import-settings": "./lib/es-import-settings.js"
+    "es-import-settings": "./lib/es-import-settings.js",
+    "es_source": "./lib/es-source.js",
+    "es-sink": "./lib/es-sink.js"
   },
   "author": "skratchdot",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/skratchdot/elasticsearch-tools.git"
+    "url": "git://github.com/Rafflecopter/elasticsearch-tools.git"
   },
   "bugs": {
-    "url": "https://github.com/skratchdot/elasticsearch-tools/issues"
+    "url": "https://github.com/Rafflecopter/elasticsearch-tools/issues"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
