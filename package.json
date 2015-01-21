@@ -1,6 +1,6 @@
 {
   "name": "es-tools",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Elasticsearch command line tools for importing, exporting, etc",
   "homepage": "http://github.com/Rafflecopter/elasticsearch-tools",
   "preferGlobal": true,
